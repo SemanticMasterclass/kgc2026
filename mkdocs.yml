@@ -1,4 +1,56 @@
 site_name: KGC 2026
 site_url: https://semanticmasterclass.github.io/kgc2026/
+repo_url: https://github.com/SemanticMasterclass/kgc2026
+repo_name: SemanticMasterclass/kgc2026
+
 theme:
   name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: lime
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: lime
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.top
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Preparation: preparation.md
+  - SPARQL: sparql.md
+  - SHACL: shacl.md
+  - About: about.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      # line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - md_in_html
+
+copyright: Copyright &copy; 2026 Davide D'Amico and Tara Raafat

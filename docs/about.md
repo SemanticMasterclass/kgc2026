@@ -29,7 +29,7 @@ and women in technology and serves on the board of Knowledge Graphs for Good.
 
 ## Davide D’Amico
 
-![Alt text](assets/davide_damico.png 'Davide D’Amico')
+![Davide D’Amico](assets/davide_damico.png "Davide D’Amico")
 
 ##### Ontology Engineer, Bloomberg
 

@@ -29,7 +29,8 @@ ex:hasArtist rdf:type owl:ObjectProperty ;
 
 
 ###  http://example.com/hasPaintType
-ex:hasPaintType rdf:type owl:ObjectProperty .
+ex:hasPaintType rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty .
 
 
 ###  http://example.com/hasSculptureMaterial
@@ -71,35 +72,6 @@ ex:hasEndCreationDate rdf:type owl:DatatypeProperty ,
 ex:hasEndDate rdf:type owl:DatatypeProperty ;
               rdfs:domain ex:Movement ;
               rdfs:range xsd:integer .
-
-
-###  http://example.com/hasPaintType
-ex:hasPaintType rdf:type owl:DatatypeProperty ;
-                rdfs:range [ rdf:type rdfs:Datatype ;
-                             owl:oneOf [ rdf:type rdf:List ;
-                                         rdf:first "Mural paint" ;
-                                         rdf:rest [ rdf:type rdf:List ;
-                                                    rdf:first "Oil paint" ;
-                                                    rdf:rest [ rdf:type rdf:List ;
-                                                               rdf:first "Tempera" ;
-                                                               rdf:rest rdf:nil
-                                                             ]
-                                                  ]
-                                       ]
-                           ] .
-
-
-###  http://example.com/hasSculptureMaterial
-ex:hasSculptureMaterial rdf:type owl:DatatypeProperty ;
-                        rdfs:range [ rdf:type rdfs:Datatype ;
-                                     owl:oneOf [ rdf:type rdf:List ;
-                                                 rdf:first "Bronze" ;
-                                                 rdf:rest [ rdf:type rdf:List ;
-                                                            rdf:first "Marble" ;
-                                                            rdf:rest rdf:nil
-                                                          ]
-                                               ]
-                                   ] .
 
 
 ###  http://example.com/hasStartCreationDate
@@ -213,7 +185,6 @@ ex:david rdf:type owl:NamedIndividual ,
          ex:isLocatedIn ex:florence ,
                         ex:italy ;
          ex:hasEndCreationDate 1504 ;
-         ex:hasSculptureMaterial "Marble" ;
          ex:hasStartCreationDate 1501 ;
          rdfs:label "David" .
 
@@ -297,7 +268,6 @@ ex:mona_lisa rdf:type owl:NamedIndividual ,
              ex:belongsToHistoricalMovement ex:renaissance ;
              ex:hasArtist ex:leonardo_da_vinci ;
              ex:hasEndCreationDate 1517 ;
-             ex:hasPaintType "Oil paint" ;
              ex:hasStartCreationDate 1503 ;
              rdfs:label "Mona Lisa" .
 
@@ -360,7 +330,6 @@ ex:the_birth_of_venus rdf:type owl:NamedIndividual ,
                       ex:isLocatedIn ex:florence ,
                                      ex:italy ;
                       ex:hasEndCreationDate 1486 ;
-                      ex:hasPaintType "Tempera" ;
                       ex:hasStartCreationDate 1484 ;
                       rdfs:label "The Birth of Venus" .
 
@@ -375,7 +344,6 @@ ex:the_last_supper rdf:type owl:NamedIndividual ,
                    ex:isLocatedIn ex:italy ,
                                   ex:milan ;
                    ex:hasEndCreationDate 1498 ;
-                   ex:hasPaintType "Mural paint" ;
                    ex:hasStartCreationDate 1494 ;
                    rdfs:label "The Last Supper" .
 
@@ -387,7 +355,6 @@ ex:the_scream rdf:type owl:NamedIndividual ,
               ex:belongsToHistoricalMovement ex:expressionism ;
               ex:hasArtist ex:edvard_munch ;
               ex:hasEndCreationDate 1893 ;
-              ex:hasPaintType "Oil paint" ;
               ex:hasStartCreationDate 1893 ;
               rdfs:label "The Scream" .
 
